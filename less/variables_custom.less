@@ -1,0 +1,38 @@
+@accent: #470;
+@brand-primary: @accent;
+
+@body-bg: #000;
+@text-color: @gray-light;
+
+@sans-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+@headings-font-family: 'Oswald', @sans-font-family;
+
+@nav-link-hover-bg: @accent;
+
+.animation(@anim) {
+  -webkit-animation: @anim;
+  -moz-animation:    @anim;
+  -ms-animation:     @anim;
+  animation:         @anim;
+}
+
+.transform(@trans) {
+  -webkit-transform: @trans;
+  -moz-transform:    @trans;
+  -ms-transform:     @trans;
+  transform:         @trans;
+}
+
+.transform-style(@trans) {
+  -webkit-transform-style: @trans;
+  -moz-transform-style:    @trans;
+  -ms-transform-style:     @trans;
+  transform-style:         @trans;
+}
+
+.perspective(@trans) {
+  -webkit-perspective: @trans;
+  -moz-perspective:    @trans;
+  -ms-perspective:     @trans;
+  perspective:         @trans;
+}

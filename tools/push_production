@@ -1,0 +1,1 @@
+scp -r ../dist/* avp42:~/me
