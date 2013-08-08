@@ -25,7 +25,7 @@ module.exports = (grunt) ->
     uglify:
       all:
         files:
-          "dist/js/all.min.js": "js/all.js"
+          "dist/js/all.min.js": "dist/js/all.js"
 
     htmlmin:
       all:
@@ -35,16 +35,43 @@ module.exports = (grunt) ->
         files:
           "dist/index.html": "index.html"
 
+    copy:
+      img:
+        files:
+          [
+            expand: true
+            src: 'img/**/*'
+            dest: 'dist/'
+            filter: 'isFile'
+          ]
+      font:
+        files:
+          [
+            expand: true
+            src: 'font/**/*'
+            dest: 'dist/'
+            filter: 'isFile'
+          ]
+
+    clean:
+      all: ['dist/']
+      font: ['dist/font']
+      img: ['dist/img']
+      js: ['dist/all.js']
+
     watch:
       less:
         files: ['less/*.less', 'less/bootstrap/*.less']
         tasks: ['less']
       concat:
         files: ['js/*.js']
-        tasks: ['concat', 'uglify']
+        tasks: ['concat', 'uglify', 'clean:js']
       htmlmin:
         files: ['index.html']
         tasks: ['htmlmin']
+      copy:
+        files: ['font/**/*', 'img/**/*']
+        tasks: ['clean:font', 'clean:img', 'copy']
       reload:
         files: ['dist/**/*.*']
         options:
@@ -54,6 +81,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-htmlmin'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['less', 'concat', 'uglify', 'htmlmin', 'watch']
+  grunt.registerTask 'default', ['clean:all', 'less', 'concat', 'uglify', 'clean:js', 'htmlmin', 'watch']
