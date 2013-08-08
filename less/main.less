@@ -21,15 +21,17 @@
   }
 }
 
-.container-nav {
+.navbar {
   .box-shadow(@accent 0 1px);
+  &.affix {
+    .navbar-fixed-top();
+  }
   .nav {
     display: inline-block;
     margin: auto;
     vertical-align: bottom;
     > li {
       > a {
-        padding: 6px 15px;
         border-radius: 0;
         .transition(.15s all);
         color: @gray-light;
@@ -43,7 +45,6 @@
   .nav-social {
     > li {
       > a {
-        padding: 0 10px;
         font-size: 23px;
       }
     }

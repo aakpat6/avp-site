@@ -20,7 +20,7 @@ module.exports = (grunt) ->
             "js/index.js"
           ]
         dest:
-          "js/all.js"
+          "dist/js/all.js"
 
     uglify:
       all:
@@ -54,10 +54,10 @@ module.exports = (grunt) ->
           ]
 
     clean:
-      all: ['dist/']
+      all: ['dist/*']
       font: ['dist/font']
       img: ['dist/img']
-      js: ['dist/all.js']
+      js: ['dist/js/all.js']
 
     watch:
       less:
@@ -85,4 +85,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['clean:all', 'less', 'concat', 'uglify', 'clean:js', 'htmlmin', 'watch']
+  grunt.registerTask 'default', ['clean:all', 'less', 'concat', 'uglify', 'clean:js', 'htmlmin', 'copy', 'watch']
