@@ -21,6 +21,10 @@
   }
 }
 
+.navbar-wrapper {
+  height: @navbar-height;
+}
+
 .navbar {
   .box-shadow(@accent 0 1px);
   &.affix {
@@ -48,5 +52,28 @@
         font-size: 23px;
       }
     }
+  }
+}
+
+.content {
+  padding-top: 20px;
+  h1 {
+    color: @gray-lighter;
+    .text-center();
+  }
+}
+
+.panel {
+  border-radius: 0;
+}
+
+.heading-fancy {
+  border-bottom: 1px solid @gray-lighter;
+  margin: 10px 0 30px;
+  span {
+    background: #000;
+    position:relative;
+    top: .5em;
+    padding: 0 20px;
   }
 }

@@ -9,7 +9,7 @@ AvpSite.init = function() {
     }
   });
 
-  $('.nav-wrapper').height($('.navbar').height());
+  // $('.nav-wrapper').height($('.navbar').height());
 };
 
 $(function() {
