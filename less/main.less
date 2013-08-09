@@ -2,6 +2,7 @@
   background: black url('../img/earth.png') no-repeat;
   background-position: 130px 50%;
   background-size: cover;
+  // background-attachment: fixed;
   border-radius: 0;
   margin-bottom: 0;
   .masthead-headings {
@@ -49,7 +50,7 @@
   .nav-social {
     > li {
       > a {
-        font-size: 23px;
+        font-size: 20px;
       }
     }
   }
@@ -69,7 +70,7 @@
 
 .heading-fancy {
   border-bottom: 1px solid @gray-lighter;
-  margin: 10px 0 30px;
+  margin: 0 0 50px;
   span {
     background: #000;
     position:relative;
@@ -79,7 +80,12 @@
 }
 
 a {
+  color: lighten(@brand-primary, 5%);
   &:hover {
     text-decoration: none;
   }
+}
+
+#img-gs {
+  width: 100%;
 }

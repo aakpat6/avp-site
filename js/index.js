@@ -9,7 +9,13 @@ AvpSite.init = function() {
     }
   });
 
-  // $('.nav-wrapper').height($('.navbar').height());
+  $('.link-nav').click(function(e) {
+    e.preventDefault();
+    var link = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(link).offset().top - 35
+    }, 500);
+  });
 };
 
 $(function() {
