@@ -60,10 +60,14 @@
 }
 
 .content {
-  padding-top: 20px;
+  background-color: @body-bg;
+  z-index: -999999;
   h1 {
     color: @gray-lighter;
     .text-center();
+  }
+  > .container {
+    padding-top: 20px;
   }
 }
 
@@ -90,6 +94,11 @@ a {
 }
 
 #img-gs {
+  width: 100%;
+  margin-top: 35px;
+}
+
+#img-avp42 {
   width: 100%;
   margin-top: 35px;
 }
