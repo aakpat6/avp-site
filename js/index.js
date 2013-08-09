@@ -16,6 +16,20 @@ AvpSite.init = function() {
       scrollTop: $(link).offset().top - 35
     }, 500);
   });
+
+  $('.masthead').each(function(){
+    var bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+      var yPos = -($(this).scrollTop() / bgobj.data('speed')) - bgobj.height() - 80;
+      var coords = '130px '+ yPos + 'px';
+      bgobj.css('backgroundPosition', coords);
+    });
+  });
+
+  var yPos = -($(window).scrollTop() / $('.masthead').data('speed')) - $('.masthead').height() - 80;
+  var coords = '130px '+ yPos + 'px';
+  $('.masthead').css('backgroundPosition', coords);
 };
 
 $(function() {
