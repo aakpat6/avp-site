@@ -2,9 +2,10 @@
   background: black url('../img/earth.png') no-repeat;
   background-position: 130px 50%;
   background-size: cover;
-  // background-attachment: fixed;
   border-radius: 0;
   margin-bottom: 0;
+  z-index: -9999999;
+  position: relative;
   .masthead-headings {
     color: @gray-lighter;
     position: relative;
@@ -29,7 +30,7 @@
 }
 
 .navbar {
-  .box-shadow(@accent 0 1px);
+  border-bottom: 1px solid @accent;
   &.affix {
     .navbar-fixed-top();
   }
@@ -91,6 +92,11 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+#img-crystal {
+  width: 100%;
+  margin-top: 35px;
 }
 
 #img-gs {

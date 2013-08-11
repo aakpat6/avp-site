@@ -1,8 +1,12 @@
 function AvpSite() {}
 
 AvpSite.updateParallax = function() {
+  return;
   var top = $(window).scrollTop();
-  // $('.masthead').css('-webkit-transform', 'translateY(' + (top / 2) + 'px)');
+  $('.masthead').css('-webkit-transform', 'translateY(' + (top / 2) + 'px)');
+  $('.masthead').css('-moz-transform', 'translateY(' + (top / 2) + 'px)');
+  $('.masthead').css('-ms-transform', 'translateY(' + (top / 2) + 'px)');
+  $('.masthead').css('transform', 'translateY(' + (top / 2) + 'px)');
 };
 
 AvpSite.init = function() {
