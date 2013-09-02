@@ -4,6 +4,7 @@
   <title>Aakash Patel</title>
   <meta name="description" content="Student + Developer. Computer science and other vaguely related things.">
   <meta name="author" content="Aakash Patel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,23 +17,20 @@
     </div>
   </div>
 
-  <div class="navbar-wrapper">
-    <div class="navbar navbar-inverse">
+  <div class="navbar-wrapper hidden-sm hidden-xs">
+    <div class="navbar navbar-inverse" role="navigation">
       <div class="container">
-        <a class="navbar-brand visible-sm" href="javascript:void(0)">Aakash Patel</a>
-        <div class="nav-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#about" class="link-nav">About</a></li>
-            <li><a href="#development" class="link-nav">Development</a></li>
-            <li><a href="#puzzles" class="link-nav">Puzzles</a></li>
-          </ul>
-          <ul class="nav navbar-nav nav-social pull-right">
-            <li><a href="//plus.google.com/105525450953560209092" rel="tooltip" title="Google+"><i class="icon-google-plus"></i></a></li>
-            <li><a href="//github.com/aakpat6" rel="tooltip" title="Github"><i class="icon-github"></i></a></li>
-            <li><a href="//facebook.com/aakash.patel.752" rel="tooltip" title="Facebook"><i class="icon-facebook"></i></a></li>
-            <li><a href="img/resume.pdf" rel="tooltip" title="Resume"><i class="icon-file-text-alt"></i></a></li>
-          </ul>
-        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#about" class="link-nav">About</a></li>
+          <li><a href="#development" class="link-nav">Development</a></li>
+          <li><a href="#puzzles" class="link-nav">Puzzles</a></li>
+        </ul>
+        <ul class="nav navbar-nav nav-social navbar-right hidden-sm hidden-xs">
+          <li><a href="//plus.google.com/105525450953560209092" rel="tooltip" title="Google+"><i class="icon-google-plus"></i></a></li>
+          <li><a href="//github.com/aakpat6" rel="tooltip" title="Github"><i class="icon-github"></i></a></li>
+          <li><a href="//facebook.com/aakash.patel.752" rel="tooltip" title="Facebook"><i class="icon-facebook"></i></a></li>
+          <li><a href="img/resume.pdf" rel="tooltip" title="Resume"><i class="icon-file-text-alt"></i></a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -42,19 +40,18 @@
       <div class="panel" id="about">
         <h1 class="heading-fancy"><span>About</span></h1>
         <div class="row">
-          <div class="col-lg-8 col-push-4">
+          <div class="col-lg-8 col-lg-push-4">
             <p class="lead">
               I am currently a sophomore at <a href="//cmu.edu">Carnegie Mellon University</a>, studying Computer Science.
               I develop mobile, web, and desktop applications, and I create puzzles.
               I also love trivia and the less conventional methods of juggling. <br>
-              <small>When I say "less conventional", I refer to devil sticks, diabolos, and yo-yos.</small>
             </p>
             <p>
-              <a href="img/resume.pdf" class="btn btn-primary">View Resume</a>
+              <a href="img/resume.pdf" class="btn btn-primary btn-lg">View Resume</a>
             </p>
           </div>
-          <div class="col-lg-4 col-pull-8 text-center">
-            <img src="img/green-crystal.png" alt="Aakash Patel" id="img-crystal">
+          <div class="col-lg-4 col-lg-pull-8 text-center">
+            <img src="img/green-crystal.png" alt="Aakash Patel" class="img-responsive" id="img-crystal">
           </div>
         </div>
       </div>
@@ -68,21 +65,21 @@
             <p class="lead">I also make other websites on the side, as well as miscellaneous development projects. Check out my <a href="//github.com/aakpat6">Github</a> page for details on my other work.</p>
           </div>
           <div class="col-lg-4 text-center">
-            <img src="img/gs-logo.png" alt="GigaStorm" id="img-gs">
+            <img src="img/gs-logo.png" alt="GigaStorm" class="img-responsive" id="img-gs">
           </div>
         </div>
       </div>
       <div class="panel" id="puzzles">
         <h1 class="heading-fancy"><span>Puzzles</span></h1>
         <div class="row">
-          <div class="col-lg-8 col-push-4">
+          <div class="col-lg-8 col-lg-push-4">
             <p class="lead">I first learned website design and backend web development through creating <a href="//avp42.com">AVP 42</a>, my puzzle website. The puzzle incorporates many of the cryptographic and scavenger-hunt type problems that I've encountered, along with many of my own puzzling concoctions. <br> AVP 42 is still under construction, but you can try it out right now, by clicking the button below.</p>
             <p>
               <a href="//avp42.com" class="btn btn-primary">Try AVP 42</a>
             </p>
           </div>
-          <div class="col-lg-4 col-pull-8 text-center">
-            <img src="img/avp42.png" alt="AVP 42" id="img-avp42">
+          <div class="col-lg-4 col-lg-pull-8 text-center">
+            <img src="img/avp42.png" alt="AVP 42" class="img-responsive" id="img-avp42">
           </div>
         </div>
       </div>
