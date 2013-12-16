@@ -1,15 +1,8 @@
-function AvpSite() {}
+var AvpSite = {};
 
-AvpSite.updateParallax = function() {
-  return;
-  var top = $(window).scrollTop();
-  $('.masthead').css('-webkit-transform', 'translateY(' + (top / 2) + 'px)');
-  $('.masthead').css('-moz-transform', 'translateY(' + (top / 2) + 'px)');
-  $('.masthead').css('-ms-transform', 'translateY(' + (top / 2) + 'px)');
-  $('.masthead').css('transform', 'translateY(' + (top / 2) + 'px)');
-};
-
-AvpSite.init = function() {
+AvpSite.init = function () {
+  'use strict';
+  
   $('[rel=tooltip]').tooltip({placement: 'bottom'});
 
   $('.navbar').affix({
@@ -25,24 +18,6 @@ AvpSite.init = function() {
       scrollTop: $(link).offset().top - 35
     }, 500);
   });
-
-  AvpSite.updateParallax();
-  $(window).scroll(function() {
-    AvpSite.updateParallax();
-  });
-
-  // $('.masthead').each(function(){
-  //   var bgobj = $(this); // assigning the object
-  //   $(window).scroll(function() {
-  //     var yPos = -($(this).scrollTop() / bgobj.data('speed')) - bgobj.height() - 80;
-  //     var coords = '130px '+ yPos + 'px';
-  //     bgobj.css('backgroundPosition', coords);
-  //   });
-  // });
-
-  // var yPos = -($(window).scrollTop() / $('.masthead').data('speed')) - $('.masthead').height() - 80;
-  // var coords = '130px '+ yPos + 'px';
-  // $('.masthead').css('backgroundPosition', coords);
 };
 
 $(function() {
