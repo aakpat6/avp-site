@@ -2,7 +2,7 @@ var AvpSite = {};
 
 AvpSite.init = function () {
   'use strict';
-  
+
   $('[rel=tooltip]').tooltip({placement: 'bottom'});
 
   $('.navbar').affix({

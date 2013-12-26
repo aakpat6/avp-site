@@ -59,6 +59,20 @@ module.exports = (grunt) ->
       img: ['dist/img']
       js: ['dist/js/all.js']
 
+    connect:
+      devserver:
+        options:
+          port: 8000
+          base: 'dist'
+
+    imagemin:
+      all:
+        files: [
+          expand: true
+          src: ['img/**/*.{png,jpg,gif}']
+          dest: 'dist/img'
+        ]
+
     watch:
       less:
         files: ['less/*.less', 'less/bootstrap/*.less']
@@ -70,8 +84,11 @@ module.exports = (grunt) ->
         files: ['index.html']
         tasks: ['htmlmin']
       copy:
+        files: ['font/**/*']
+        tasks: ['clean:font', 'copy']
+      imagemin:
         files: ['font/**/*', 'img/**/*']
-        tasks: ['clean:font', 'clean:img', 'copy']
+        tasks: ['clean:img', 'imagemin']
       reload:
         files: ['dist/**/*.*']
         options:
@@ -83,6 +100,19 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-htmlmin'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-contrib-imagemin'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['clean:all', 'less', 'concat', 'uglify', 'clean:js', 'htmlmin', 'copy', 'watch']
+  grunt.registerTask 'default', [
+    'clean:all'
+    'less'
+    'concat'
+    'uglify'
+    'clean:js'
+    'htmlmin'
+    'copy'
+    'imagemin'
+    'connect'
+    'watch'
+  ]
