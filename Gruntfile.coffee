@@ -84,11 +84,8 @@ module.exports = (grunt) ->
         files: ['index.html']
         tasks: ['htmlmin']
       copy:
-        files: ['font/**/*']
+        files: ['font/**/*', 'img/*/**']
         tasks: ['clean:font', 'copy']
-      imagemin:
-        files: ['font/**/*', 'img/**/*']
-        tasks: ['clean:img', 'imagemin']
       reload:
         files: ['dist/**/*.*']
         options:
@@ -112,7 +109,6 @@ module.exports = (grunt) ->
     'clean:js'
     'htmlmin'
     'copy'
-    'imagemin'
     'connect'
     'watch'
   ]
