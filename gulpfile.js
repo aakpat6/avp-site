@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var htmlmin = require('gulp-htmlmin');
 var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
+var csso = require('gulp-csso');
 
 gulp.task('scripts', function() {
   gulp.src('js/**')
@@ -17,6 +18,7 @@ gulp.task('styles', function() {
   gulp.src('less/style.less')
     .pipe(less())
     .pipe(autoprefixer("last 1 version", "> 1%", "ie 8", "ie 7"))
+    .pipe(csso())
     .pipe(gulp.dest('./dist/css'));
 });
 

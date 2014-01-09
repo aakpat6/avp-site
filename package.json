@@ -10,6 +10,8 @@
     "gulp-autoprefixer": "0.0.3",
     "gulp-concat": "~2.1.7",
     "express": "~3.4.7",
-    "path": "~0.4.9"
+    "path": "~0.4.9",
+    "gulp-uncss": "~0.1.5",
+    "gulp-csso": "~0.1.7"
   }
 }
