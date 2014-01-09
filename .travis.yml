@@ -1,8 +1,8 @@
 before_script:
-- npm install -g grunt-cli
+- npm install -g gulp
 - npm install
 script:
-- grunt prod
+- gulp --prod
 deploy:
   provider: s3
   access_key_id: AKIAIQ2JWFCMZ6JQBAKQ
