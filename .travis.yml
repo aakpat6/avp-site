@@ -10,6 +10,7 @@ deploy:
     secure: YpfPRzvy/8EbC/CJ7sx27NHteTnF9OV+sxAUn5jrmQFBhWZYxly2rViM1DLvHIXs5nvF3La7GNiJEb4tznYOs8uNuHERa/JcvLEcPeGwQZkBa5IOcsNEsLuOLuW44qxAdLVAHBVheRwNoWxMuyi+m5hDWzTEGJbaVsLvuwZqf9w=
   bucket: avp42.com
   local-dir: dist
+  skip_cleanup: true
   on:
     repo: aakpat6/avp-site
     branch: master
