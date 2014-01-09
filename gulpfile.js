@@ -15,9 +15,7 @@ gulp.task('scripts', function() {
 
 gulp.task('styles', function() {
   gulp.src('less/style.less')
-    .pipe(less({
-      paths: './less/style.less'
-    }).on('error', console.log))
+    .pipe(less())
     .pipe(autoprefixer("last 1 version", "> 1%", "ie 8", "ie 7"))
     .pipe(gulp.dest('./dist/css'));
 });
@@ -56,7 +54,6 @@ gulp.task('default', function() {
 
     app.use(express.query())
       .use(express.bodyParser())
-      .use(express.directory(path.resolve('./dist/')))
       .use(express.static(path.resolve('./dist/')))
       .listen(port, function() {
         gutil.log('Listening on', port);
