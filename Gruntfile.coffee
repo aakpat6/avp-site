@@ -101,7 +101,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', [
+  grunt.registerTask 'prod', [
     'clean:all'
     'less'
     'concat'
@@ -109,6 +109,9 @@ module.exports = (grunt) ->
     'clean:js'
     'htmlmin'
     'copy'
+  ]
+  grunt.registerTask 'default', [
+    'prod'
     'connect'
     'watch'
   ]

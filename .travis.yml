@@ -1,0 +1,15 @@
+before_script:
+- npm install -g grunt-cli
+- npm install
+script:
+- grunt prod
+deploy:
+  provider: s3
+  access_key_id: AKIAIQ2JWFCMZ6JQBAKQ
+  secret_access_key:
+    secure: YpfPRzvy/8EbC/CJ7sx27NHteTnF9OV+sxAUn5jrmQFBhWZYxly2rViM1DLvHIXs5nvF3La7GNiJEb4tznYOs8uNuHERa/JcvLEcPeGwQZkBa5IOcsNEsLuOLuW44qxAdLVAHBVheRwNoWxMuyi+m5hDWzTEGJbaVsLvuwZqf9w=
+  bucket: avp42.com
+  local-dir: dist
+  on:
+    repo: aakpat6/avp-site
+    branch: master
