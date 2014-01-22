@@ -1,6 +1,4 @@
-var AvpSite = {};
-
-AvpSite.init = function () {
+$(function () {
   'use strict';
 
   $('[rel=tooltip]').tooltip({placement: 'bottom'});
@@ -18,8 +16,4 @@ AvpSite.init = function () {
       scrollTop: $(link).offset().top - 35
     }, 500);
   });
-};
-
-$(function() {
-  AvpSite.init();
 });
