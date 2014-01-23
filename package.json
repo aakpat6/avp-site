@@ -2,7 +2,7 @@
   "name": "AvpSite",
   "version": "0.1.0",
   "devDependencies": {
-    "gulp": "~3.2.5",
+    "gulp": "~3.4.0",
     "gulp-util": "~2.2.12",
     "gulp-htmlmin": "~0.1.1",
     "gulp-uglify": "~0.1.0",

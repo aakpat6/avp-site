@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var csso = require('gulp-csso');
 
 gulp.task('scripts', function() {
-  gulp.src('js/**')
+  gulp.src(['js/affix.js', 'js/tooltip.js', 'js/index.js'])
     .pipe(concat('all.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
