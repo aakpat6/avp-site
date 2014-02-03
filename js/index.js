@@ -16,4 +16,18 @@ $(function () {
       scrollTop: $(link).offset().top - 35
     }, 500);
   });
+
+  var bgIndex = 0;
+
+  var setBackground = function () {
+    var curElem = $('.masthead-bg img').eq(bgIndex);
+    bgIndex = (bgIndex + 1) % ($('.masthead-bg img').length);
+    var newElem = $('.masthead-bg img').eq(bgIndex);
+    curElem.fadeOut(1000, function() {
+      newElem.fadeIn(1000, function() {
+        setTimeout(setBackground, 3000);
+      });
+    });
+  };
+  setBackground();
 });

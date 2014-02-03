@@ -48,6 +48,10 @@ gulp.task('default', function() {
       gulp.run('styles');
     });
 
+    gulp.watch('index.html', function() {
+      gulp.run('html');
+    });
+
     var express = require('express');
     var path = require('path');
 

@@ -1,10 +1,10 @@
 .masthead {
-  background: black url('../img/earth.png') no-repeat;
+  background: black;
   background-position: 200px -200px;
   background-attachment: fixed;
   border-radius: 0;
   margin-bottom: 0;
-  z-index: -9999999;
+  z-index: -9999;
   position: relative;
   .masthead-headings {
     color: @gray-lighter;
@@ -20,6 +20,17 @@
       margin-top: 0;
       background-color: fadeout(@gray-darker, 20%);
       padding: 10px 60px 10px 50px;
+    }
+  }
+  .masthead-bg {
+    position: fixed;
+    z-index: -999999999;
+    height: 100%;
+    width: 100%;
+    top: -40%;
+    left: 10%;
+    img {
+      display: none;
     }
   }
 }
