@@ -1,8 +1,10 @@
 before_script:
-- npm install -g gulp
-- npm install
+  - npm install -g gulp
+  - npm install
 script:
-- gulp --prod
+  - gulp --prod
+after_success:
+  - gzip -9 -r --suffix " " dist
 deploy:
   provider: s3
   access_key_id: AKIAIQ2JWFCMZ6JQBAKQ
