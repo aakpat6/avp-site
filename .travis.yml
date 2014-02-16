@@ -14,5 +14,5 @@ deploy:
   local-dir: dist
   skip_cleanup: true
   on:
-    repo: aakpat6/avp-site
+    repo: avp/avp-site
     branch: master
