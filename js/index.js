@@ -13,8 +13,11 @@ $(function () {
     e.preventDefault();
     var link = $(this).attr('href');
     $('html, body').animate({
-      scrollTop: $(link).offset().top - 35
-    }, 500);
+      scrollTop: $(link).offset().top
+    }, 500, function() {
+      window.location.hash = link;
+    });
+    return false;
   });
 
   var bgIndex = 0;
