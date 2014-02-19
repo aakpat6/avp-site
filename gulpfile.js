@@ -28,6 +28,9 @@ gulp.task('copy', function() {
 
   gulp.src('img/**')
     .pipe(gulp.dest('dist/img'));
+
+  gulp.src('img/favicon.ico')
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('html', function() {
