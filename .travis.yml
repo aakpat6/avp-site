@@ -5,10 +5,10 @@ script:
 - gulp --prod
 deploy:
   provider: s3
-  access_key_id: AKIAIQ2JWFCMZ6JQBAKQ
+  access_key_id: AKIAIZ2PRWDM2DDIKT2Q
   secret_access_key:
-    secure: YpfPRzvy/8EbC/CJ7sx27NHteTnF9OV+sxAUn5jrmQFBhWZYxly2rViM1DLvHIXs5nvF3La7GNiJEb4tznYOs8uNuHERa/JcvLEcPeGwQZkBa5IOcsNEsLuOLuW44qxAdLVAHBVheRwNoWxMuyi+m5hDWzTEGJbaVsLvuwZqf9w=
-  bucket: me.avp42.com
+    secure: Zy9eF9S2AkoRrOfb/n5N/5tleYT9YMwJZo1X0tZFOXNJ75z3sCMXKFzHZnl/vb9zYFMqnjF6QlOCG+yCcXiEZXfZPAEmO3H+YRRfAP5cdxeOdwI1pN+AkEKgULpe+KVwlzKtVTBgzdqQcNlJScfLRmT4qmYH9I6Q8hSe1+LU6dI=
+  bucket: me-avp42.com
   local-dir: dist
   skip_cleanup: true
   on:
