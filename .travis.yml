@@ -8,7 +8,7 @@ deploy:
   access_key_id: AKIAIZ2PRWDM2DDIKT2Q
   secret_access_key:
     secure: c4/Cgy+plaAwvcS6ctXNAvhCmXxGTVjAbD8YDi/k/K8PY8sAQSi4VN2MR+CMSL/Nqt+kX55g5cGcyBQpUoQYztVz2yQqcVvy3lm9AYmIOkqbxlvYn+W7e3gJKh+3tZDQa5VQpt9qms07uH1I2YE/N20dRqiGwrmlrRxUQR2Bphs=
-  bucket: me-avp42.com
+  bucket: me.avp42.com
   local-dir: dist
   skip_cleanup: true
   on:
