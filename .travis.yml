@@ -7,10 +7,9 @@ deploy:
   provider: s3
   access_key_id: AKIAIZ2PRWDM2DDIKT2Q
   secret_access_key:
-    secure: Zy9eF9S2AkoRrOfb/n5N/5tleYT9YMwJZo1X0tZFOXNJ75z3sCMXKFzHZnl/vb9zYFMqnjF6QlOCG+yCcXiEZXfZPAEmO3H+YRRfAP5cdxeOdwI1pN+AkEKgULpe+KVwlzKtVTBgzdqQcNlJScfLRmT4qmYH9I6Q8hSe1+LU6dI=
+    secure: c4/Cgy+plaAwvcS6ctXNAvhCmXxGTVjAbD8YDi/k/K8PY8sAQSi4VN2MR+CMSL/Nqt+kX55g5cGcyBQpUoQYztVz2yQqcVvy3lm9AYmIOkqbxlvYn+W7e3gJKh+3tZDQa5VQpt9qms07uH1I2YE/N20dRqiGwrmlrRxUQR2Bphs=
   bucket: me-avp42.com
   local-dir: dist
   skip_cleanup: true
   on:
     repo: avp/avp-site
-    branch: master
