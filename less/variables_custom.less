@@ -1,4 +1,4 @@
-@accent: #480;
+@accent: #070;
 @brand-primary: @accent;
 
 @body-bg: #000;
@@ -6,7 +6,9 @@
 
 @sans-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
 @headings-font-family: 'Oswald', @sans-font-family;
-@link-hover-color: @gray-lighter;
+
+@link-color: lighten(@brand-primary, 10%);
+@link-hover-color: lighten(@link-color, 50%);
 
 @navbar-inverse-bg: #000;
 @nav-link-hover-bg: @accent;
@@ -19,39 +21,12 @@
 @border-radius-large: 0;
 @border-radius-small: 0;
 
-.animation(@anim) {
-  -webkit-animation: @anim;
-  -moz-animation:    @anim;
-  -ms-animation:     @anim;
-  animation:         @anim;
-}
-
-.transform(@trans) {
-  -webkit-transform: @trans;
-  -moz-transform:    @trans;
-  -ms-transform:     @trans;
-  transform:         @trans;
-}
-
-.transform-style(@trans) {
-  -webkit-transform-style: @trans;
-  -moz-transform-style:    @trans;
-  -ms-transform-style:     @trans;
-  transform-style:         @trans;
-}
-
-.perspective(@trans) {
-  -webkit-perspective: @trans;
-  -moz-perspective:    @trans;
-  -ms-perspective:     @trans;
-  perspective:         @trans;
-}
-
-@-webkit-keyframes slideright {
-  from {
-    top: 0;
+a {
+  &:hover {
+    text-decoration: none;
   }
-  to {
-    top: 15px;
-  }
+}
+
+.btn-primary {
+  border-bottom: 4px solid darken(@brand-primary, 10%);
 }

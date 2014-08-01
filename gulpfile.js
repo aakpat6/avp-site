@@ -8,14 +8,14 @@ var autoprefixer = require('gulp-autoprefixer');
 var csso = require('gulp-csso');
 
 gulp.task('scripts', function() {
-  gulp.src(['js/affix.js', 'js/tooltip.js', 'js/index.js'])
+  return gulp.src(['js/affix.js', 'js/tooltip.js', 'js/index.js'])
     .pipe(concat('all.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('styles', function() {
-  gulp.src('less/style.less')
+  return gulp.src('less/style.less')
     .pipe(less())
     .pipe(autoprefixer("last 1 version", "> 1%", "ie 8", "ie 7"))
     .pipe(csso())
@@ -34,14 +34,12 @@ gulp.task('copy', function() {
 });
 
 gulp.task('html', function() {
-  gulp.src('index.html')
+  return gulp.src('index.html')
     .pipe(htmlmin())
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('default', function() {
-  gulp.run('scripts', 'styles', 'copy', 'html');
-
+gulp.task('default', ['scripts', 'styles', 'copy', 'html'], function() {
   if (!gulp.env.prod) {
     gulp.watch('js/**', function() {
       gulp.run('scripts');
